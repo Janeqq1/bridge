@@ -7,7 +7,7 @@ const biddingUrl = "http://localhost:3000/ourprecision.json";
 function App() {
   const { useState, useEffect } = React;
   const [data, setData] = useState({ biddings: [] });
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,7 +34,7 @@ function App() {
       {isLoading ?
         (<div>Loading Data....</div>)
         :
-        (<BiddingSystem biddings = { data.biddings } />)
+        (<BiddingSystem biddings = { data.biddings[0] } index={1} />)
       }
 
     </div>

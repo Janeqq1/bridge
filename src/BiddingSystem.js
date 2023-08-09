@@ -1,6 +1,6 @@
 import React from "react";
 
-function BiddingSystem({ biddings }) {
+function BiddingSystem({ biddings, index }) {
     const [collapsed, setCollapsed] = React.useState(true);
     function handleToggle() {
         console.log("button clicked");
@@ -8,24 +8,29 @@ function BiddingSystem({ biddings }) {
     }
 
     return (
-        <div className="container">
+        <div className="container mb-2" style={{ marginLeft: index }}>
             {
-                biddings.map((item, index) => (
-                    <div className="row bg-light mb-2" key={index}>
-                        <div className="col-1 ms-0 ps-0 text-start">
-                          <button className="btn btn-primary me-2" onClick={handleToggle}>+</button>
-                          <span>{item.bid}</span>
-                        </div>
-                        <div className="col text-secondary text-start">
-                          <div>{item.sum}</div>
-                          <div>{item.des1}</div>
-                        </div>
-                        {
-                            !collapsed && item.res.length > 0 ? <BiddingSystem biddings={item.res} /> : null
-                        }
+                <div className="row bg-light mb-20 mt-20 px-10">
+                    <div className="col-2 ms-0 ps-0 text-start">
+                        {biddings.res.length > 0 ? <button className="btn btn-sm btn-primary me-2" onClick={handleToggle}>
+                        {collapsed ? "+" : "-" }
+                        </button> : <button className="btn btn-secondary btn-sm me-2 disabled" >
+                        x
+                        </button>}
+                        <span>{biddings.bid}</span>
                     </div>
-                ))
+                    <div className="col text-secondary text-start">
+                        <div>{biddings.sum}</div>
+                        <div>{biddings.des1}</div>
+                    </div>
+                    {
+                        !collapsed && biddings.res.map((bid)=>(
+                            <BiddingSystem biddings={bid} index={index+20} />
+                        ))
+                    }
+                </div>
             }
+            
         </div>
     );
 }

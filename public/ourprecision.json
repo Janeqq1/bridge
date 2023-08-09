@@ -3,7 +3,10 @@
     "d3": "des*: sum of the bid",
     "d4": "res: the list of responses",
 
-    "biddings": [
+    "biddings": [{
+        "bid": "Constructive Bids",
+        "sum": "constructive bidding sequences",
+        "res": [
         {
             "bid": "1C",
             "sum": "Strong 16+, artificial",
@@ -125,5 +128,5 @@
             "sum": "11-15, 6+C",
             "res": []
         }
-    ] 
+    ]}]
 }
