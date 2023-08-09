@@ -1,0 +1,129 @@
+{   "d1": "bid: bid of the bid",
+    "d2": "sum: summary explanation of the bid",
+    "d3": "des*: sum of the bid",
+    "d4": "res: the list of responses",
+
+    "biddings": [
+        {
+            "bid": "1C",
+            "sum": "Strong 16+, artificial",
+            "des1": "This version of precision is based on simplified modern precision, adding some transfer relays and special treatments.",
+            "res": [
+                {
+                    "bid": "1D",
+                    "sum": "negative 0-7hcp, any shape",
+                    "res": [
+                        {
+                            "bid": "1H/1S",
+                            "sum": "4+, F1, may have longer minor",
+                            "des1": "it's unclear what kinf of hand will have a longer minor",
+                            "res": [
+                                {
+                                    "bid": "1S",
+                                    "sum": "Over 1C-1D-1H, 4+S",
+                                    "des1": "Tends to deny 3-card H support; if there is 3-card H, it means strength is 0-5 hcp",
+                                    "res": []
+                                },
+                                {
+                                    "bid": "1NT",
+                                    "sum": "0-5 hcp, no 4-card support in the bid major. May have 3. NF",
+                                    "res": []
+                                },
+                                {
+                                    "bid": "2C",
+                                    "sum": "6-7 hcp, no 3-card support",
+                                    "res": []
+                                },
+                                {
+                                    "bid": "2D",
+                                    "sum": "artificial, 6-7 hcp, 3-card support in the bid major",
+                                    "res": []
+                                }
+                            ]
+                        },
+                        {
+                            "bid": "1NT",
+                            "sum": "17-19 hcp, balanced",
+                            "des1": "frequently have 5-card minor, may have 5-card major as well. May have singleton A or K. 1NT sequence follows up to 2NT",
+                            "res": []
+                        },
+                        {
+                            "bid": "2C/2D",
+                            "sum": "non-forcing, usually 6+ card, 21-",
+                            "res": []
+                        }
+                    ]
+                },
+                {
+                    "bid": "1H",
+                    "sum": "by unpassed hand, 8-11hcp, any shape",
+                    "res": []
+                },
+                {
+                    "bid": "1H*",
+                    "sum": "by passed hand, 8+hcp, transfer bid showing 5+S",
+                    "res": []
+                }
+            ]
+        },
+
+        {
+            "bid": "1D",
+            "sum": "2+D, 11-15",
+            "desc1": "Have to announce: D could be as short as 2",
+            "res": []
+        },
+
+        {
+            "bid": "1M",
+            "sum": "5+, 11-15",
+            "res": []
+        },
+
+        {
+            "bid": "1NT",
+            "sum": "14-16, balanced",
+            "res": [
+                {
+                    "bid": "2C",
+                    "sum": "stayman",
+                    "des1": "maybe garbage stayman. If not garbage stayman, this promises at least one 4-card major",
+                    "res": [
+                        {
+                            "bid": "2D",
+                            "sum": "deny 4-card major",
+                            "res": []
+                        },
+                        {
+                            "bid": "2H/2S",
+                            "sum": "4-card major, if both majors, bid 2H first",
+                            "res": []
+                        }
+                    ]
+                },
+                {
+                    "bid": "2D",
+                    "sum": "transfer to H, 5+H",
+                    "res": []
+                },
+                {
+                    "bid": "2H",
+                    "sum": "transfer to S, 5+S",
+                    "res": []
+                },
+                {
+                    "bid": "2S",
+                    "sum": "range asking",
+                    "res": []
+                }
+
+            ]
+        },
+
+        {
+            "bid": "2C",
+            "sum": "11-15, 6+C",
+            "res": []
+        }
+    ] 
+}
